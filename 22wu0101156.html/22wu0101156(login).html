@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+                background-color: plum;
+                background-size: cover; 
+                background-repeat: no-repeat; 
+                display: flex;
+                justify-content: center;
+                font-family: cursive;
+                font-size: larger;
+                
+            }
+          
+
+        .login-container {
+            background-color: white;
+            width: 420px;
+            padding: 40px;
+            border-radius: 30px;
+            border-color: rgb(233, 164, 198);
+            margin-top: 2cm;
+            text-align: center;
+        }
+
+        h2 {
+            align-content: center;
+            color: teal;
+        }
+
+        label {
+            display: block;
+            margin: 20px  15px;
+            color: black;
+            font-size: larger;
+        }
+
+        input {
+            padding: 10px;
+            width: 100%;
+            color: rgb(233, 164, 198);
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: rgb(255, 0, 111);
+            color: antiquewhite;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-family: cursive;
+            margin-top: 0.5cm;
+            margin-bottom: 0.2cm;
+            font-size: large;
+        }
+
+        button.register{
+            font-size: large;
+            
+            
+        }
+
+        button.cv{
+            font-size: large;
+        
+        }
+        .reg{
+            color:white;
+            text-decoration: none;
+        }
+        .cvv{
+            color:white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="login-container">
+
+        <h2>Login</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button type="submit">Login</button>
+
+
+            <div class="action-buttons">
+
+                <button class="register"> <a href="22wu0101156(reg).html" class="reg">Registration</a></button>
+                <button class="cv"><a href="22wu0101156(cv).html" class="cvv">CV</a></button>
+                
+            </div>
+        </form>
+    </div>
+</body>
+</html>

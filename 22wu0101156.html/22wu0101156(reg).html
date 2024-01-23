@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: cursive;
+            font-size: larger;
+            margin: 0;
+            padding: 200px;
+            background-color: plum;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .registration-container {
+            background-color: #f9ecec;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            font-family: cursive;
+            color:teal;
+            font-family: cursive;
+        }
+
+        .registration-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        .registration-container .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            background-color: #f9ecec;
+        }
+
+        .registration-container button {
+            width: 48%;
+            padding: 20px;
+            background-color:  rgb(255, 0, 111);
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            font-family: cursive;
+            font-size: large;
+        }
+    </style>
+
+    <script>
+      function validateForm() {
+        var username = document.getElementById('username').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        // Reset error messages
+        document.getElementById('usernameError').textContent = "";
+        document.getElementById('emailError').textContent = "";
+        document.getElementById('passwordError').textContent = "";
+
+        // Validate username
+        if (username === "") {
+            document.getElementById('usernameError').textContent = "Username is required.";
+            return false;
+        }
+
+        // Validate email
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            document.getElementById('emailError').textContent = "Invalid email address.";
+            return false;
+        }
+
+        // Validate password
+        if (password.length < 6) {
+            document.getElementById('passwordError').textContent = "Password must be at least 6 characters.";
+            return false;
+        }
+
+        // Additional validation logic can be added here
+
+        // If all validations pass, the form can be submitted
+        return true;
+      }
+    </script>
+</head>
+<body>
+    <div class="registration-container">
+        <h2>Registration</h2>
+        <form>
+            <input type="text" placeholder="Register ID" required>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Contact" required>
+            <input type="text" placeholder="Height" required>
+            <input type="text" placeholder="Weight" required>
+            <input type="text" placeholder="Gender" required>
+            <input type="text" placeholder="Address" required>
+            <input type="text" placeholder="Date of Birth" required>
+            <input type="text" placeholder="Occupation" required>
+            <input type="text" placeholder="Annual Salary" required>
+
+            <div class="button-container">
+                <button type="submit">Register</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
